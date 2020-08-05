@@ -1,12 +1,16 @@
-import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
-import { Field, Int, ObjectType } from 'type-graphql';
+import { Entity, PrimaryGeneratedColumn, Column, BaseEntity } from 'typeorm';
+import { Field, ObjectType } from 'type-graphql';
+import { validate } from 'class-validator';
 
 @ObjectType()
 @Entity()
-export class User {
-	@Field(() => Int)
+export class User extends BaseEntity {
 	@PrimaryGeneratedColumn()
 	id: number;
+
+	@Field()
+	@Column('text', { unique: true })
+	href: string;
 
 	@Field()
 	@Column()
@@ -16,11 +20,11 @@ export class User {
 	@Column()
 	lastName: string;
 
-	@Field()
 	@Column()
 	password: string;
 
 	@Field()
-	@Column()
+	@Column('text', { unique: true })
 	email: string;
 }
+validate(User);

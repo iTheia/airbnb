@@ -4,5 +4,7 @@ export declare const passwordNotLongEnough = "password must be at least 5 charac
 export declare const invalidEmail = "email must be vaild";
 export declare const validUserSchema: yup.ObjectSchema<yup.Shape<object | undefined, {
     email: string;
+    firstName: string;
+    lastName: string;
     password: string;
 }>>;

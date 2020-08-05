@@ -12,6 +12,8 @@ exports.validUserSchema = yup.object().shape({
         .max(255)
         .email(exports.invalidEmail)
         .required(),
+    firstName: yup.string().min(1).max(255).required(),
+    lastName: yup.string().min(3).max(255).required(),
     password: yup.string().min(5, exports.passwordNotLongEnough).max(255).required(),
 });
 //# sourceMappingURL=user.js.map
