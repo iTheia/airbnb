@@ -1,0 +1,17 @@
+{
+    "name": "airbnb",
+    "version": "1.0.0",
+    "description": "airbnb clone",
+    "private": true,
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/iTheia/airbnb.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/iTheia/airbnb/issues"
+    },
+    "homepage": "https://github.com/iTheia/airbnb#readme"
+}
